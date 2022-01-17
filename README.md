@@ -1,6 +1,6 @@
 ## About hbt_log_Manager
 
-hbt-log_manager is a simple modules that allows you to improve the way you log intp graylog in drupal 8 apps
+hbt_log_manager is a simple modules that allows you to improve the way you log intp graylog in drupal 8 apps
 
  - before doing any thing you should know that this modules need that this package install on your drupal 8 project using composer
  - run following command in your root project of drupal 8 apps
