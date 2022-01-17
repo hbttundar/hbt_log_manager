@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the hbt_log_Manager module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function hbt_log_manager_install() {
+  \Drupal::messenger()->addStatus(__FUNCTION__);
+  $config = Drupal::configFactory()
+    ->getEditable('hbt_log_manager.settings');
+  $config->set('Enable', TRUE)->save();
+  /**
+   * Development environment config
+   */
+  $config->set('Log_aggregation_for_Development_Environment.default_logger', 'GrayLog')
+    ->save();
+  /**
+   * Test environment config
+   */
+  $config->set('Log_aggregation_for_Test_Environment.default_logger', 'GrayLog')
+    ->save();
+  /**
+   * Live environment config
+   */
+  $config->set('Log_aggregation_for_Live_Environment.default_logger', 'GrayLog')
+    ->save();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function hbt_log_Manager_uninstall() {
+  \Drupal::messenger()->addStatus(__FUNCTION__);
+}
+
+
+

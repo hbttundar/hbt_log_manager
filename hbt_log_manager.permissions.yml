@@ -1,0 +1,4 @@
+administer hbt_log_Manager configuration:
+  title: 'Administer hbt_log_Manager configuration'
+  description: 'Optional description.'
+  restrict access: true

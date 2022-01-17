@@ -1,0 +1,32 @@
+services:
+  hbt_log_Manager.event_subscriber:
+    class: Drupal\hbt_log_Manager\EventSubscriber\LogManagerSubscriber
+    arguments:
+      - '@request_stack'
+      - '@event_dispatcher'
+    tags:
+      - { name: event_subscriber , responder: true , priority: 999 }
+  hbt_log_Manager.logger_base:
+    abstract: true
+    class: Drupal\hbt_log_Manager\Logger\LoggerBase
+    factory: [ '\Drupal\hbt_log_Manager\Logger\LoggerBase', 'getInstance' ]
+    tags:
+      - { name: logger_base }
+  hbt_log_Manager.logger:
+    parent: hbt_log_Manager.logger_base
+    class: Drupal\hbt_log_Manager\Logger\Logger
+    factory: hbt_log_Manager.logger_base.get
+    tags:
+      - { name: Logger }
+  hbt_log_Manager.graylog:
+    parent: hbt_log_Manager.logger_base
+    class: Drupal\hbt_log_Manager\Logger\GrayLog
+    factory: hbt_log_Manager.logger_base.get
+    tags:
+      - { name: grayLog }
+  logger.db:
+    parent: hbt_log_Manager.logger_base
+    class: Drupal\hbt_log_Manager\Logger\DB
+    factory: hbt_log_Manager.logger_base.get
+    tags:
+      - { name: dblog }

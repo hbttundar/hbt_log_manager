@@ -1,0 +1,8 @@
+name: Log Manager
+type: module
+description: Log Manager For Drupal 8
+package: hbt
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - mkt_host_manager

@@ -1,0 +1,14 @@
+system.admin_config_marketing:
+  path: '/admin/config/marketing'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Marketing'
+  requirements:
+    _permission: 'access administration pages'
+hbt_log_Manager.config:
+  path: '/admin/config/marketing/log-manager/config'
+  defaults:
+    _title: 'Marketing Log Manager settings'
+    _form: 'Drupal\hbt_log_Manager\Form\ConfigForm'
+  requirements:
+    _permission: 'administer Marketing Log Manager configuration'

@@ -1,0 +1,11 @@
+marketing.group.admin:
+  title: 'Marketing'
+  route_name: system.admin_config_marketing
+  parent: system.admin_config
+  description: 'Marketing Module Configuration'
+  weight: -999
+hbt_log_Manager.config:
+  title: 'Marketing-Log-Manager'
+  route_name: hbt_log_Manager.config
+  description: 'Configure Log Manager Module'
+  parent: marketing.group.admin

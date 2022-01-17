@@ -1,0 +1,22 @@
+hbt_log_Manager.settings:
+  type: config_object
+  label: 'Config Logger Handler'
+  mapping:
+    Enable:
+      type: boolean
+      label: 'Enable Logger handler module'
+    Log_aggregation_for_Development_Environment:
+      mapping:
+        default_logger:
+          type: select
+          label: 'Default Logger'
+    Log_aggregation_for_Test_Environment:
+      mapping:
+        default_logger:
+          type: select
+          label: 'Default Logger'
+    Log_aggregation_for_Live_Environment:
+      mapping:
+        default_logger:
+          type: select
+          label: 'Default Logger'
