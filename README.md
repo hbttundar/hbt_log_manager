@@ -4,7 +4,7 @@ hbt_log_manager is a simple modules that allows you to improve the way you log i
 
  - before doing any thing you should know that this modules need that this package install on your drupal 8 project using composer
  - run following command in your root project of drupal 8 apps
- - [ composer require  "graylog2/gelf-php" ]
+ - [  composer require graylog2/gelf-php "^1.7.0" ]
  - after install garylog gelf-php packages you can download this modules and add it to your drupal 8 modules folder
  - this folder is in web->modules->{your company modules folder}->hbt_log_manager
  - after that you can install the module using admin ui or using drush command
