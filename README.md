@@ -5,7 +5,7 @@ hbt_log_manager is a simple modules that allows you to improve the way you log i
  - before doing any thing you should know that this modules need that this package install on your drupal 8 project using composer
  - run following command in your root project of drupal 8 apps
  - [  composer require graylog2/gelf-php "^1.7.0" ]
- - after install garylog gelf-php packages you can download this modules and add it to your drupal 8 modules folder
+ - after install garylog gelf-php package you can download this modules and add it to your drupal 8 modules folder
  - this folder is in web->modules->{your company modules folder}->hbt_log_manager
  - after that you can install the module using admin ui or using drush command
  - for drush command you can install it like this : [drush -l "your-site-name" pm-enable hbt_log_manager or drush pm-enable hbt_log_manager]
@@ -13,10 +13,10 @@ hbt_log_manager is a simple modules that allows you to improve the way you log i
     - [GRAYLOG_HOST = {your graaylog host}]
     - [GRAYLOG_PORT = {your graaylog port}]
 - as defualt in this module we use tcp gelf connections , if you wanna change it feel free to change it in src->Logger->Gralog.php
-- remember that this is not a package this is a drupal module and need drupal installation cause it use sort of drupal service container
+- remember that this is not a package this is a drupal module and need drupal installation.
 ## how to use it in code
 
-by Installing this module in your drupal 8 your application send log message for whole request that received to graylog in once and also anonymous the secret key like password token and ...
+by Installing this module in your drupal 8, your application send log message for whole request that received until the response for that request create to graylog in once and also anonymous the secret key like password token and ...
 you have this static modules that you can use every where in your drupal app :
 
 - [Logger:infoEvent() for example - Logger::infoEvent('rendering method in xxx class ', $data)]
